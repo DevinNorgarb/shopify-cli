@@ -70,7 +70,7 @@ module ShopifyCLI
             @context.expects(:capture2).with("npm config get @shopify:registry").returns(
               ["https://registry.yarnpkg.com", nil]
             )
-            ShopifyCLI::Git.expects(:clone).with("https://github.com/Shopify/shopify-app-node.git", "test-app")
+            ShopifyCLI::Git.expects(:clone).with("https://github.com/Shopify/shopify-app-template-node.git", "test-app")
             ShopifyCLI::JsDeps.expects(:install)
             ShopifyCLI::Tasks::CreateApiClient.stubs(:call).returns({
               "apiKey" => "ljdlkajfaljf",
@@ -103,7 +103,7 @@ module ShopifyCLI
               chdir: @context.root + "/test-app"
             )
 
-            ShopifyCLI::Git.expects(:clone).with("https://github.com/Shopify/shopify-app-node.git", "test-app")
+            ShopifyCLI::Git.expects(:clone).with("https://github.com/Shopify/shopify-app-template-node.git", "test-app")
             ShopifyCLI::JsDeps.expects(:install)
             ShopifyCLI::Tasks::CreateApiClient.stubs(:call).returns({
               "apiKey" => "ljdlkajfaljf",
@@ -125,7 +125,7 @@ module ShopifyCLI
             @context.expects(:capture2).with("npm config get @shopify:registry").returns(
               ["https://registry.yarnpkg.com", nil]
             )
-            ShopifyCLI::Git.expects(:clone).with("https://github.com/Shopify/shopify-app-node.git", "test-app")
+            ShopifyCLI::Git.expects(:clone).with("https://github.com/Shopify/shopify-app-template-node.git", "test-app")
             ShopifyCLI::JsDeps.expects(:install)
 
             stub_partner_req(
@@ -170,7 +170,7 @@ module ShopifyCLI
             @context.expects(:capture2).with("npm config get @shopify:registry").returns(
               ["https://badregistry.com", nil]
             )
-            ShopifyCLI::Git.expects(:clone).with("https://github.com/Shopify/shopify-app-node.git", "test-app")
+            ShopifyCLI::Git.expects(:clone).with("https://github.com/Shopify/shopify-app-template-node.git", "test-app")
             @context.expects(:system).with(
               "npm",
               "--userconfig",
