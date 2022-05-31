@@ -48,11 +48,11 @@ module ShopifyCLI
       private
 
       def batch_request(method:, path:, **args, &block)
-        request = BatchRequest.new(args)
+        request = BatchRequest.new(method, path, args)
 
         batch.enqueue(request)
         return unless batch.ready?(request)
-        
+
         block.call(batch.request)
       end
 

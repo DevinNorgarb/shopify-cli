@@ -30,7 +30,7 @@ module ShopifyCLI
                 "body": {
                   "asset": {
                     "key": "templates/index.liquid",
-                    "public_url": null,
+                    "public_url": nil,
                     "created_at": "2022-04-05T13:20:49-04:00",
                     "updated_at": "2022-04-05T13:20:49-04:00",
                     "content_type": "application/x-liquid",
@@ -45,7 +45,7 @@ module ShopifyCLI
                 "body": {
                   "asset": {
                     "key": "icon-minus.liquid",
-                    "public_url": null,
+                    "public_url": nil,
                     "created_at": "2022-04-05T13:20:49-04:00",
                     "updated_at": "2022-04-05T13:20:49-04:00",
                     "content_type": "application/x-liquid",
@@ -58,7 +58,7 @@ module ShopifyCLI
             ],
           })
 
-          parser.parse_entry(key)
+          parser.parse
         end
 
         private

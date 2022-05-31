@@ -4,12 +4,13 @@ module ShopifyCLI
   module Theme
     class ThemeAdminAPIThrottler
       class BatchRequest
-        def initialize(args)
+        def initialize(method, path, args)
+          @method = method
+          @path = path
           @args = args
         end
 
         def size
-
         end
       end
     end
