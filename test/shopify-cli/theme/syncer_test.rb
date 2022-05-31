@@ -138,7 +138,7 @@ module ShopifyCLI
         file.expects(:write).with("merged content")
 
         @syncer.expects(:enqueue).with(:update, file)
-        @syncer.send(:union_merge, file)
+        @syncer.send(:union_merge, file) { }
       end
 
       def test_enqueue_union_merges
